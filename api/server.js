@@ -1,10 +1,10 @@
 // build your server here and require it from index.js
-require('dotenv').config()
+const express = require('express');
 
-const server = require('./api/server')
+const ProjectRouter = require('./project/router')
+const ResourceRouter = require('./resource/router')
+const TaskRouter = require('./task/router')
 
-const PORT = process.env.PORT || 5000
+const server = express();
 
-server.listen(PORT, () => {
-  console.log(`server is running on ${PORT}`)
-})
+server.use(express.json());
