@@ -1,1 +1,1 @@
-// build your `Resource` model here
+//RESOURCE MODEL

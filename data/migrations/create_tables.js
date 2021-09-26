@@ -20,26 +20,26 @@ exports.up = function (knex) {
          .unsigned() // required so that no negative numbers occur
          .references("project_id")
          .inTable("projects")
-         .onDelete("RESTRICT")
-         .onUpdate("RESTRICT");
+         .onDelete("CASCADE")
+         .onUpdate("CASCADE");
     })
-    .createTable('project_resources', tbl => {
-      tbl.increments('project_resources_id')
-      tbl.integer('project_id')
+    .createTable("project_resources", tbl => {
+      tbl.increments("project_resources_id")
+      tbl.integer("project_id")
          .unsigned() //required so that no negative numbers occur
          .notNullable()
-         .references('project_id')
-         .inTable('projects')
-         .onDelete('RESTRICT')
-         .onUpdate('RESTRICT')
+         .references("project_id")
+         .inTable("projects")
+         .onDelete("CASCADE")
+         .onUpdate("CASCADE")
       
-      tbl.integer('resource_id')
+      tbl.integer("resource_id")
          .unsigned()
          .notNullable()
-         .references('resource_id')
-         .inTable('resources')
-         .onDelete('RESTRICT')
-         .onUpdate('RESTRICT')
+         .references("resource_id")
+         .inTable("resources")
+         .onDelete("CASCADE")
+         .onUpdate("CASCADE")
     })
 };
 
