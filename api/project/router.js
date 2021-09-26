@@ -1,4 +1,4 @@
-// build your `/api/projects` router here
+//PROJECTS ROUTER
 const express = require("express");
 const Projects = require("./model");
 

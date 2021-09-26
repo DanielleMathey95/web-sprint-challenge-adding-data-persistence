@@ -1,4 +1,4 @@
-// build your `/api/resources` router here
+//RESOURCES ROUTER
 const express = require("express");
 const Resources = require("./model");
 
